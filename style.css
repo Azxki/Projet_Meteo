@@ -52,7 +52,6 @@
 }
 
 #temperature {
-    text-align: center;
     margin-left: 20%;
     margin-top: -3%;
     padding-bottom: 15.2%;
@@ -61,8 +60,11 @@
 
 
 #degres {
-    text-align: center;
-    margin-top: 15%;
-    margin-left: 40%;
+    margin-left: 75%;
+    font-size: 250%;
+}
+
+#humidite {
+    margin-left: 70%;
     font-size: 250%;
 }
