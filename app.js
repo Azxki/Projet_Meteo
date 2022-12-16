@@ -4,16 +4,6 @@ let degres = document.getElementById('degres');
 let button = document.getElementById('button');
 let input = document.getElementById('input');
 let humidity = document.getElementById('humidite');
-let img = document.createElement('img');
-
-document.body.appendChild(img);
-img.src = "nuageux.gif";
-img.style.position = "absolute";
-img.style.display = "flex";
-img.style.opacity = "50%";
-img.style.marginTop = "3%";
-img.style.marginLeft = "10rem";
-img.style.width = "80%";
 
 let aujourdhui = new Date();
 date.innerHTML = aujourdhui.toLocaleDateString();
@@ -75,8 +65,6 @@ let printPosition = function (coordinates) {
 
     xhr.send();
 }
-
-
 
 
 navigator.geolocation.getCurrentPosition(printPosition);
