@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://kit.fontawesome.com/6df8555a49.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<img src="nuageux.gif" alt="Nuage" id="nuage">
     <div id="meteo">
+        <input type="text" value="" placeholder="Nouvelle ville..." id="input">
+        <button type="submit" id="button">Ajouter</button>
         <h1 id="ville">ville</h1>
         <span id="date">date</span>
-        ** icon **
-        <span id="temperature">Minimum : </span>
-        <span id="temperature2">Maximum : </span>
+        <i class="fa-solid fa-sun-bright"></i>
+        <span id="degres">deg</span>
+        <span id="temperature">Température : </span>
     </div>
 </body>
 <script src="app.js"></script>

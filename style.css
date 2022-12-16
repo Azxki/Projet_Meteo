@@ -5,3 +5,64 @@
     font-size: 100%;
 }
 
+#input {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#button {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#nuage {
+    position: absolute;
+    display: flex;
+    opacity: 50%;
+    margin-top: 3%;
+    margin-left: 10rem;
+    width:80%;
+}
+
+#meteo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10rem;
+    z-index: 10;
+    margin-top: 3%;
+}
+
+#ville {
+    margin-top: 5rem;
+    margin-left: 3rem;
+    font-size: 220%;
+}
+
+#ville:first-letter {
+    text-transform: uppercase;
+}
+
+#date {
+    font-size: 120%;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+#temperature {
+    text-align: center;
+    margin-left: 20%;
+    margin-top: -3%;
+    padding-bottom: 15.2%;
+    font-family: "Segoe UI Semibold", sans-serif;
+}
+
+
+#degres {
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 40%;
+    font-size: 250%;
+}
