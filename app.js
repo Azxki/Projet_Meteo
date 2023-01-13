@@ -1,5 +1,6 @@
 let ville = document.getElementById('ville');
 let date = document.getElementById('date');
+let meteo = document.getElementById('meteo');
 let degres = document.getElementById('degres');
 let temperature = document.getElementById('temperature');
 let temperature2 = document.getElementById('temperature2');
@@ -10,6 +11,12 @@ let sunrise = document.getElementById('sunrise');
 let sunset = document.getElementById('sunset');
 let temps = document.getElementById('temps');
 let visibility = document.getElementById('visibility');
+let image1 = document.getElementById('image1');
+let image2 = document.getElementById('image2');
+let image3 = document.getElementById('image3');
+let image4 = document.getElementById('image4');
+let image5 = document.getElementById('image5');
+let image6 = document.getElementById('image6');
 
 let aujourdhui = new Date();
 date.innerHTML = aujourdhui.toLocaleDateString();
@@ -44,9 +51,19 @@ let printPosition = function (coordinates) {
             temperature2.innerHTML = Math.trunc(response.main.temp_min) + "°";
             visibility.innerHTML = "visibilité de " + response.visibility/1000 + "km";
             sunrise.innerHTML = new Date (response.sys.sunrise*1000).getHours() + "h" + new Date (response.sys.sunrise*1000).getMinutes();
-            sunset.innerHTML = new Date (response.sys.sunset*1000).getHours() + "h0" + new Date (response.sys.sunset*1000).getMinutes();
+            sunset.innerHTML = new Date (response.sys.sunset*1000).getHours() + "h" + new Date (response.sys.sunset*1000).getMinutes();
             temps.innerHTML = response.weather[0].description;
             humidity.innerHTML = "Humidité : " + Math.trunc(response.main.humidity) + "%";
+
+            if (response.weather[0].main === "Clouds") {
+                image1.style.opacity = "1";
+                image2.style.opacity = "0";
+            }
+
+            if (response.weather[0].main === "Clear") {
+                image1.style.opacity = "0";
+                image2.style.opacity = "1";
+            }
         }
 
         xhr.send();
@@ -70,12 +87,18 @@ let printPosition = function (coordinates) {
         temperature2.innerHTML = Math.trunc(response.main.temp_min) + "°";
         visibility.innerHTML = "visibilité de " + response.visibility/1000 + "km";
         sunrise.innerHTML = new Date (response.sys.sunrise*1000).getHours() + "h" + new Date (response.sys.sunrise*1000).getMinutes();
-        sunset.innerHTML = new Date (response.sys.sunset*1000).getHours() + "h0" + new Date (response.sys.sunset*1000).getMinutes();
+        sunset.innerHTML = new Date (response.sys.sunset*1000).getHours() + "h" + new Date (response.sys.sunset*1000).getMinutes();
         temps.innerHTML = response.weather[0].description;
         humidity.innerHTML = "Humidité : " + Math.trunc(response.main.humidity) + "%";
 
         if (response.weather[0].main === "Clouds") {
-            document.body.style.backgroundColor = "#879cb6";
+            image1.style.opacity = "1";
+            image2.style.opacity = "0";
+        }
+
+        if (response.weather[0].main === "Clear") {
+            image1.style.opacity = "0";
+            image2.style.opacity = "1";
         }
     }
     xhr.send();
