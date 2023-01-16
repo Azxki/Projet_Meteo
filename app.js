@@ -94,11 +94,19 @@ let printPosition = function (coordinates) {
         if (response.weather[0].main === "Clouds") {
             image1.style.opacity = "1";
             image2.style.opacity = "0";
+            image3.style.opacity = "0";
         }
 
         if (response.weather[0].main === "Clear") {
             image1.style.opacity = "0";
             image2.style.opacity = "1";
+            image3.style.opacity = "0";
+        }
+
+        if (response.weather[0].main === "Rain") {
+            image1.style.opacity = "0";
+            image2.style.opacity = "0";
+            image3.style.opacity = "1";
         }
     }
     xhr.send();
