@@ -113,4 +113,6 @@ let printPosition = function (coordinates) {
 }
 
 
+
+
 navigator.geolocation.getCurrentPosition(printPosition);
