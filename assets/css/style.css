@@ -1,10 +1,11 @@
+/* Reset CSS */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 100%;
 }
-
+/* Placement des éléments HTML */
 #date {
     margin-top: 3%;
     margin-left: 0;
@@ -135,6 +136,8 @@
     font-size: 150%;
 }
 
+/* Placement des images et les mettres invisibles grâce à l'opacité */
+
 #image1 {
     position: absolute;
     width: 100%;
@@ -158,6 +161,8 @@
     z-index: -1;
     opacity: 0;
 }
+
+/* Mise en place du responsive CSS */
 
 @media screen and (max-width: 350px){
     * {

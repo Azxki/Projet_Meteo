@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Le header qui contient : - Le titre
+                                  - Le "meta" pour le reponsive
+                                  - Le script pour le Jquery
+                                  - L'ajout du CSS au HTML
+                                  -->
+    <meta charset="UTF-8">
+    <title>Projet Meteo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6df8555a49.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<!-- Création du projet météo complet grâce a une div -->
+    <div id="meteo">
+        <!-- Ajout des backgrounds selon la météo -->
+        <img src="../assets/img/nuageux.jpg" alt="" id="image1">
+        <img src="../assets/img/degage.jpg" alt="" id="image2">
+        <img src="../assets/img/pluie.jpg" alt="" id="image3">
+        <!-- Ajout d'un bouton pour rechercher différentes villes -->
+        <label for="input"></label>
+        <input type="text" value="" placeholder="Nouvelle ville..." id="input">
+        <button type="submit" id="button">Rechercher</button>
+        <!-- Ajout de la date actuelle -->
+        <p id="date"></p>
+        <!-- Création de petites images pour indiquer : - La température minimale
+                                                        - La température maximale
+                                                        - L'humidité
+                                                        - La visibilité au "km" près
+                                                        - L'heure du lever et coucher de soleil
+                                                      -->
+        <div id="border">
+            <h1 id="ville"></h1>
+            <p id="degres"></p>
+            <p id="temps"></p>
+            <div style="display: flex; flex-direction: row">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span id="temperature"></span>
+                <i class="fa-solid fa-arrow-down"></i>
+                <span id="temperature2"></span>
+            </div>
+            <i class="fa-solid fa-droplet"></i>
+            <p id="humidite"></p>
+            <i class="fa-solid fa-sun"></i>
+            <p id="sunrise"></p>
+
+            <i class="fa-solid fa-moon"></i>
+            <p id="sunset"></p>
+            <i class="fa-solid fa-eye-slash"></i>
+            <p id="visibility"></p>
+        </div>
+    </div>
+</body>
+<!-- Ajout du JS -->
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/export.js"></script>
+</html>
